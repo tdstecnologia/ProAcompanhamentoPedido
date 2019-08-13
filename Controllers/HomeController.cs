@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProAcompanhamentoPedido.Dao;
-using System;
+using ProAcompanhamentoPedido.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ProAcompanhamentoPedido.Controllers
@@ -11,15 +11,26 @@ namespace ProAcompanhamentoPedido.Controllers
     {
 
         PedidoRepository _pedidoRepository;
+        private readonly AcompanhamentoContexto _context;
 
-        public HomeController(PedidoRepository pedidoRepository)
+        public HomeController(PedidoRepository pedidoRepository, AcompanhamentoContexto context)
         {
             _pedidoRepository = pedidoRepository;
+            _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View(_pedidoRepository.Pedidos);
+
+            //List<PedidoCliente> pedidos = await _context.PedidoClientes.Include(p =>p.Cliente).ToListAsync();
+
+            return View();
+        }
+
+        public async Task<IActionResult> Teste()
+        {
+            List<PedidoCliente> pedidos = await _context.PedidoClientes.Include(p => p.Cliente).ToListAsync();
+            return View(pedidos);
         }
 
         public IActionResult Slide()
