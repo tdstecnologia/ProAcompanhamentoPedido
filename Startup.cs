@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using ProAcompanhamentoPedido.Dao;
 
 namespace ProAcompanhamentoPedido
 {
@@ -14,6 +15,7 @@ namespace ProAcompanhamentoPedido
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<PedidoRepository, PedidoRepository>();
             services.AddMvc();
         }
 
