@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ProAcompanhamentoPedido.Models;
 using ProAcompanhamentoPedido.Repository;
 
 namespace ProAcompanhamentoPedido
@@ -20,8 +19,10 @@ namespace ProAcompanhamentoPedido
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
             services.AddEntityFrameworkNpgsql()
-         .AddDbContext<AcompanhamentoContexto>(options => options.UseNpgsql(Configuration.GetConnectionString("Conexao")));
+         .AddDbContext<AcompanhamentoContexto>
+         (options => options.UseNpgsql(Configuration.GetConnectionString("Conexao")));
         }
 
 

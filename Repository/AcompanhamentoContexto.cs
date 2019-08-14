@@ -17,13 +17,16 @@ namespace ProAcompanhamentoPedido.Repository
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Schema do Banco de dados
             modelBuilder.HasDefaultSchema("public");
 
+            // Mapeamento Relacionamento
             modelBuilder.Entity<Pedido>()
                 .HasOne(p => p.Cliente)
                 .WithMany(c => c.Pedidos)
                 .HasForeignKey(p => p.ClienteId);
 
+            // Mapeamento do enum DomStatusPedido
             modelBuilder
             .Entity<Pedido>()
             .Property(p => p.Status)
