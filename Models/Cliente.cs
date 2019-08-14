@@ -18,6 +18,6 @@ namespace ProAcompanhamentoPedido.Models
         public string Nome { get; set; }
 
         [InverseProperty("Cliente")]
-        public List<PedidoCliente> Pedidos { get; set; }
+        public List<Pedido> Pedidos { get; set; }
     }
 }
