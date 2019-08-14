@@ -3,6 +3,7 @@ using ProAcompanhamentoPedido.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using ProAcompanhamentoPedido.Repository;
 
 namespace ProAcompanhamentoPedido.Controllers
 {

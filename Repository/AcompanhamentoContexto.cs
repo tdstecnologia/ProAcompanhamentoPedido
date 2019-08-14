@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProAcompanhamentoPedido.Dominio;
+using ProAcompanhamentoPedido.Models;
 using System;
 
-namespace ProAcompanhamentoPedido.Models
+namespace ProAcompanhamentoPedido.Repository
 {
     public class AcompanhamentoContexto : DbContext
     {

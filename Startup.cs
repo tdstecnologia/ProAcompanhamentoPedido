@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ProAcompanhamentoPedido.Models;
+using ProAcompanhamentoPedido.Repository;
 
 namespace ProAcompanhamentoPedido
 {
