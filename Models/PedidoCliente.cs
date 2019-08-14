@@ -18,8 +18,6 @@ namespace ProAcompanhamentoPedido.Models
         [Column("cliente_id")]
         public int ClienteId { get; set; }
 
-        //public DomStatusPedido Status = DomStatusPedido.BALCAO;
-
         [Column("status")]
         public DomStatusPedido Status { get; set; }
 

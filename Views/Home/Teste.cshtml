@@ -11,7 +11,7 @@
     <table class="table col-4">
         <thead class="thead-dark" >
             <tr>
-                <th scope="col" style="background-color:aqua; border-color:aqua;">&nbsp;</th>
+                <th scope="col" style="background-color:aqua; border-color:aqua;">Código</th>
                 <th scope="col" style="background-color:aqua; border-color:aqua;">@DomStatusPedido.SEPARACAO</th>
             </tr>
         </thead>
@@ -22,7 +22,7 @@
                 {
             <tr>
                 <td>@p.PedidoClienteId</td>
-                <td>@p.Status</td>
+                <td>@p.Cliente.Nome</td>
             </tr>
                 }
             }
@@ -32,8 +32,8 @@
     <table class="table col-4">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">Status</th>
+                <th scope="col">Código</th>
+                <th scope="col">@DomStatusPedido.BALCAO</th>
             </tr>
         </thead>
         <tbody>
@@ -43,7 +43,7 @@
                 {
                     <tr>
                         <td>@p.PedidoClienteId</td>
-                        <td>@p.Status</td>
+                        <td>@p.Cliente.Nome</td>
                     </tr>
                 }
             }
@@ -53,8 +53,8 @@
     <table class="table col-4">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">Status</th>
+                <th scope="col">Código</th>
+                <th scope="col">@DomStatusPedido.ENTREGUE</th>
             </tr>
         </thead>
         <tbody>
@@ -64,7 +64,7 @@
                 {
                     <tr>
                         <td>@p.PedidoClienteId</td>
-                        <td>@p.Status</td>
+                        <td>@p.Cliente.Nome</td>
                     </tr>
                 }
             }
